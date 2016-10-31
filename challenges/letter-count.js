@@ -4,7 +4,7 @@
   occurs in the string. For example, given the word "apple", letterCount("apple") should count all
   occurrences of the letters "a", "p", "l" and "e" and then return the following output:
 
-  ```javascript
+
   {
     "a": 1,
     "p": 2,
@@ -30,4 +30,22 @@
 
 */
 
+
+
+
+
+
 // YOUR CODE HERE
+function letterCount(string) {
+  var solution = {};
+  var makeArray = string.split("");
+  makeArray.forEach(function(letters) {
+    if (solution[letters]) {
+      solution[letters] += 1;
+    } else {
+      solution[letters] = 1;
+    }
+  });
+  return solution;
+
+}
